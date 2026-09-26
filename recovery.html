@@ -1,0 +1,13 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Account recovery · Continuum</title><link rel="stylesheet" href="styles.css"></head><body><header class="topbar"><div class="container nav"><a class="brand" href="index.html">Continuum</a><nav class="navlinks"><a href="index.html">Home</a><a href="about.html">About</a><a href="index.html" data-action="logout">Log out</a>
+</nav><div class="nav-actions"><a class="btn" href="login.html">Log in</a><a class="btn premium" href="premium.html">Premium R100/month</a></div></div></header><main class="main" style="max-width:760px;margin:auto"><div class="card form"><span class="eyebrow">Account recovery</span><h1>Recover your Continuum account</h1><p class="muted">Enter your Continuum ID and use your camera if available. This prototype records a recovery request; real biometric identity verification should be connected to a compliant identity provider before production.</p><form id="recovery-form"><div class="field"><label>Continuum ID</label><input name="id" required placeholder="CTM-ABC123-456"></div><button class="btn primary">Submit recovery request</button></form><div id="recovery-result"></div></div></main><script src="app.js" defer></script><footer class="site-footer"><a href="terms.html">Terms &amp; Conditions</a></footer>
+
+<section class="live-photo-card">
+  <h2>Live recovery photo</h2>
+  <p>Use your device camera to take a live recovery photo. Do not upload an image.</p>
+  <video id="recoveryLivePhoto" autoplay playsinline muted></video>
+  <canvas id="recoveryPhotoCanvas" hidden></canvas>
+  <button type="button" id="takeRecoveryPhoto">Take live photo</button>
+  <p id="recoveryPhotoStatus" class="form-help"></p>
+</section>
+<script src="camera.js"></script>
+</body></html>

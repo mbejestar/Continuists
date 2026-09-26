@@ -1,0 +1,12 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Create account · Continuum</title><link rel="stylesheet" href="styles.css"></head><body><main class="page-main"><section class="section"><div class="container" style="max-width:650px"><div class="card"><span class="eyebrow">Account</span><h2>Create your account</h2><p class="muted">Your account is part of the record when you create, access or transfer a mission.</p><form id="signup-form" class="form"><div class="field"><label>Full name</label><input name="name" required></div><div class="field"><label>Username</label><input name="username" required minlength="3" maxlength="30" pattern="[A-Za-z0-9._-]+" placeholder="e.g. continuum_creator"><p class="muted small">This is the username other users can use to identify you.</p></div><div class="field"><label>Email address</label><input name="email" type="email" required></div><div class="row2"><div class="field"><label>Password</label><input name="password" type="password" minlength="8" required></div><div class="field"><label>Confirm password</label><input name="confirm" type="password" minlength="8" required></div></div><label class="check"><input id="terms" type="checkbox" required><span>I have read and agree to the Continuum Terms and Conditions and Privacy Notice.</span></label><button type="submit" class="btn primary" disabled>Create account</button><p id="photo-gate" class="form-help">Take your live profile photo before you can create your account.</p><p class="muted small"><a href="recovery.html">Forgot your password or email? Use your Continuum ID and recovery photo.</a></p></form>
+<section class="live-photo-card">
+  <h2>Live profile photo <span class="required-badge">Required</span></h2>
+  <p>Take a live photo using your device camera. Uploaded profile images are not accepted.</p>
+  <video id="livePhoto" autoplay playsinline muted></video>
+  <canvas id="livePhotoCanvas" hidden></canvas>
+  <button type="button" id="takeLivePhoto">Take live photo</button>
+  <p id="livePhotoStatus" class="form-help"></p>
+</section>
+<p class="muted small">Already registered? <a href="login.html">Log in</a></p></div></div></section></main><script src="app.js" defer></script><footer class="site-footer"><a href="terms.html">Terms &amp; Conditions</a></footer>
+<script src="camera.js"></script>
+</body></html>
